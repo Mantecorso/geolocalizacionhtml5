@@ -10,7 +10,7 @@ if("geolocation" in navigator) {
 
 if("geolocation" in navigator) {
 navigator.geolocation.getCurrentPosition(function(position){
-    console.log(position);
+    //console.log(position);
     //console.log("Localizacion" + position.coords.latitude, position.coords.longitude);
     //geolocalizacion en bonito
 }, function (err) {
@@ -26,6 +26,23 @@ navigator.geolocation.getCurrentPosition(function(position){
 
 //geolocalizacion si se esta moviendo
 var watchID = navigator.geolocation.watchPosition(function(position) {
-
+console.log(position);
+//este console log se renueva constantemente buscando la posicion
 })
-console.log(watchID);
+//console.log(watchID);
+console.log("watchID", watchID);
+
+var watchID = navigator.geolocation.watchPosition(function(position) {
+    console.log(position)
+}, function (err) {
+    console.log(err);
+},{
+    maximunAge: Infinity, //milisegundos tambien se puede poner tiempo infinito desde la ultima vez que tiene en cache
+    timeout: 10000, //milisegundos tiempo de espera para encontrar la geolocalizacion
+    enableHighAccuracy: true // alta precision
+});
+
+    navigator.geolocation.clearWatch(watchID);
+    //deja de rastrear clearWatch
+    console.log("watchID", watchID);
+    
