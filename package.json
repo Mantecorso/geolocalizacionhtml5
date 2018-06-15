@@ -1,0 +1,23 @@
+{
+  "name": "geolocalizacionhtml5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server ./public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mantecorso/geolocalizacionhtml5.git"
+  },
+  "author": "Luis Jurado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mantecorso/geolocalizacionhtml5/issues"
+  },
+  "homepage": "https://github.com/Mantecorso/geolocalizacionhtml5#readme",
+  "dependencies": {
+    "live-server": "^1.2.0"
+  }
+}
