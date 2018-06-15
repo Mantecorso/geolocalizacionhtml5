@@ -11,6 +11,8 @@ if("geolocation" in navigator) {
 if("geolocation" in navigator) {
 navigator.geolocation.getCurrentPosition(function(position){
     console.log(position);
+    //console.log("Localizacion" + position.coords.latitude, position.coords.longitude);
+    //geolocalizacion en bonito
 }, function (err) {
     console.log(err);
 },{
@@ -21,3 +23,9 @@ navigator.geolocation.getCurrentPosition(function(position){
 } else {
     alert('La geolocalizacion no existe en su ordenador');
 }
+
+//geolocalizacion si se esta moviendo
+var watchID = navigator.geolocation.watchPosition(function(position) {
+
+})
+console.log(watchID);
